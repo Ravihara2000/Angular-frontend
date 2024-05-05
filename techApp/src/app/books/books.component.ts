@@ -9,4 +9,6 @@ export class BooksComponent {
 
   name="Madol duwa";
   author="Martin wick";
+
+  isDisabled : boolean=false;
 }
