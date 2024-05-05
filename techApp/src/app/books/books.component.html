@@ -1,8 +1,8 @@
-<p>books works!</p>
+
 <h1>
     <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg" width="100px" height="150">
 <br>    {{name}} <br>
     {{author}}
 </h1>
 
- <button [disabled]="isDisabled">show books</button>
+ <button (click)="handleClick()" (mouseover)="handleclick2()" [disabled]="isDisabled">show books</button>

@@ -11,4 +11,12 @@ export class BooksComponent {
   author="Martin wick";
 
   isDisabled : boolean=false;
+
+  handleClick(){
+    this.isDisabled=true;
+  }
+
+  handleclick2(){
+    alert("hi")
+  }
 }
