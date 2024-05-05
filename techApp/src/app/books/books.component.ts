@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class BooksComponent {
 
-
+  name="Madol duwa";
+  author="Martin wick";
 }
