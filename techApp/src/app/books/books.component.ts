@@ -19,4 +19,11 @@ export class BooksComponent {
   handleclick2(){
     alert("hi")
   }
+
+
+  myName: String="";
+  // handleInput(event:any){
+  //   console.log(event?.target);
+  //   this.myName=event?.target.value;
+  // }
 }

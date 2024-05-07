@@ -5,4 +5,7 @@
     {{author}}
 </h1>
 
- <button (click)="handleClick()" (mouseover)="handleclick2()" [disabled]="isDisabled">show books</button>
+ <button (click)="handleClick()"  [disabled]="isDisabled">show books</button>
+
+ <input type="text" [(ngModel)]="myName">
+ <p>{{myName}}</p>
