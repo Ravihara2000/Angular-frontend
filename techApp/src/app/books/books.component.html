@@ -1,11 +1,21 @@
 
-<h1>
+<ul *ngIf="isShowing">
+    <li>
     <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg" width="100px" height="150">
 <br>    {{name}} <br>
     {{author}}
-</h1>
+</li>
+</ul>
+ <!-- <button (click)="handleClick()"  [disabled]="isDisabled">show books</button> -->
 
- <button (click)="handleClick()"  [disabled]="isDisabled">show books</button>
+ <!-- <input type="text" [(ngModel)]="myName"> -->
 
- <input type="text" [(ngModel)]="myName">
+ <!-- <button (click)="toggleBooks()">
+<span *ngIf="!isShowing">Show Books</span>
+<span *ngIf="isShowing">Hide books</span>
+</button> -->
+<button (click)="toggleBooks()">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Show Books</ng-container>
+    </button>
  <p>{{myName}}</p>

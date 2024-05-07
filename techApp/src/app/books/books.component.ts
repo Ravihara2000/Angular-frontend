@@ -12,13 +12,13 @@ export class BooksComponent {
 
   isDisabled : boolean=false;
 
-  handleClick(){
-    this.isDisabled=true;
-  }
+  // handleClick(){
+  //   this.isDisabled=true;
+  // }
 
-  handleclick2(){
-    alert("hi")
-  }
+  // handleclick2(){
+  //   alert("hi")
+  // }
 
 
   myName: String="";
@@ -26,4 +26,10 @@ export class BooksComponent {
   //   console.log(event?.target);
   //   this.myName=event?.target.value;
   // }
+
+  isShowing:boolean=true;
+  toggleBooks(){
+    this.isShowing=!this.isShowing;
+  }
+
 }
