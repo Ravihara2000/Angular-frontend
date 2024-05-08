@@ -1,0 +1,28 @@
+.num-count{
+    color: rgb(211, 25, 31);
+    font-size:larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title{
+    color: rgb(211, 25, 31);
+    font-size:larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.book-list{
+    list-style: none;
+    text-overflow: ellipsis;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+ul{
+    display: flex;
+    margin: 100;
+}
