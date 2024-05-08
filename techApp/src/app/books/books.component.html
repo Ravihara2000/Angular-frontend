@@ -1,10 +1,13 @@
 
 <ul *ngIf="isShowing">
+    <ng-container *ngFor="let book of books; let i=index ">
     <li>
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg" width="100px" height="150">
-<br>    {{name}} <br>
-    {{author}}
+        {{i+1}}
+    <img [src]="book.image" alt="{{book.name}}" width="100">
+<br>    {{book.name}} <br>
+    {{book.author}}
 </li>
+</ng-container>
 </ul>
  <!-- <button (click)="handleClick()"  [disabled]="isDisabled">show books</button> -->
 
