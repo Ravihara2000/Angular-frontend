@@ -3,6 +3,7 @@ interface Book{
   name:string
   author:string
   image:string
+  price:number
 }
 @Component({
   selector: 'app-books',
@@ -38,19 +39,22 @@ export class BooksComponent {
 
   books:Book[]=[
     {
-      name:"Madol duwa",
-      author:"Martin wick",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg"
+      name:"madol duwa",
+      author:"martin wick",
+      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
+      price:100
     },
     {
-      name:"Madol duwa2",
-      author:"Martin wick2",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg"
+      name:"madol duwa2",
+      author:"martin wick2",
+      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
+      price:123
     },
     {
-      name:"Madol duwa3",
-      author:"Martin wick3",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg"
+      name:"madol duwa3",
+      author:"martin wick3",
+      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
+      price:456
     },
   ];
 
