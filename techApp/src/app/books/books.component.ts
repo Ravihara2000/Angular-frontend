@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../model/book';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.scss']
 })
-export class BooksComponent {
+export class BooksComponent implements OnInit {
 
   // name="Madol duwa";
   // author="Martin wick";
+
+  ngOnInit(): void {
+      console.log('oninit');
+      
+  }
+  constructor(){
+    console.log('constructor');
+    
+  }
 
   isDisabled : boolean=false;
 
