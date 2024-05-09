@@ -1,0 +1,7 @@
+<li class="book-list">
+    <!-- <p class="num-count">{{i+1}}</p> -->
+<img [src]="book.image" alt="{{book.name}}" width="100">
+<br>    <div class="title">{{book.name | titlecase}} <br>
+{{book.author | titlecase}} <br> price is {{book.price | currency: 'CAD'}}</div>
+<button (click)="addToCard()">Add to cart</button>
+</li>

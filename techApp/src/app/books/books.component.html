@@ -1,13 +1,12 @@
+<button (click)="toggleBooks()">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Show Books</ng-container>
+    </button>
+
 
 <ul *ngIf="isShowing">
-    <ng-container *ngFor="let book of books; let i=index ">
-    <li class="book-list">
-        <p class="num-count">{{i+1}}</p>
-    <img [src]="book.image" alt="{{book.name}}" width="100">
-<br>    <div class="title">{{book.name | titlecase}} <br>
-    {{book.author | titlecase}} <br> price is {{book.price | currency: 'CAD'}}
-</div>
-</li>
+    <ng-container *ngFor="let oneBook of books; let i=index ">
+<app-book (bookEmitter)="addToCard($event)"[book] ="oneBook"></app-book>
 </ng-container>
 </ul>
  <!-- <button (click)="handleClick()"  [disabled]="isDisabled">show books</button> -->
@@ -18,8 +17,5 @@
 <span *ngIf="!isShowing">Show Books</span>
 <span *ngIf="isShowing">Hide books</span>
 </button> -->
-<button (click)="toggleBooks()">
-    <ng-container *ngIf="!isShowing">Show Books</ng-container>
-    <ng-container *ngIf="isShowing">Show Books</ng-container>
-    </button>
+
  <p>{{myName}}</p>

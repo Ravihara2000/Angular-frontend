@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-interface Book{
-  name:string
-  author:string
-  image:string
-  price:number
-}
+import { Book } from '../model/book';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -58,4 +53,11 @@ export class BooksComponent {
     },
   ];
 
+  card: Book[]=[];
+  addToCard(book:Book){
+    this.card.push(book);
+    console.log(this.card);
+    
+    
+  }
 }
