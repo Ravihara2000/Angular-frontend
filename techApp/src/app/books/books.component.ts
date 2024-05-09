@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../model/book';
+import { BooksService } from './books.service';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -7,15 +8,20 @@ import { Book } from '../model/book';
 })
 export class BooksComponent implements OnInit {
 
+  bookService = new BooksService();
+
+
   // name="Madol duwa";
   // author="Martin wick";
 
   ngOnInit(): void {
       console.log('oninit');
+      this.books=this.booksServices.getBooks();
       
   }
-  constructor(){
+  constructor(private booksServices: BooksService){
     console.log('constructor');
+  
     
   }
 
@@ -42,24 +48,7 @@ export class BooksComponent implements OnInit {
   }
 
   books:Book[]=[
-    {
-      name:"madol duwa",
-      author:"martin wick",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
-      price:100
-    },
-    {
-      name:"madol duwa2",
-      author:"martin wick2",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
-      price:123
-    },
-    {
-      name:"madol duwa3",
-      author:"martin wick3",
-      image:"https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg",
-      price:456
-    },
+    
   ];
 
   card: Book[]=[];
