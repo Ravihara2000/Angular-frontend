@@ -4,29 +4,23 @@ import { BooksService } from './books.service';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss']
-  
+  styleUrls: ['./books.component.scss'],
 })
 export class BooksComponent implements OnInit {
-
   bookService = new BooksService();
-
 
   // name="Madol duwa";
   // author="Martin wick";
 
   ngOnInit(): void {
-      console.log('oninit');
-      this.books=this.booksServices.getBooks();
-      
+    console.log('oninit');
+    this.books = this.booksServices.getBooks();
   }
-  constructor(private booksServices: BooksService){
+  constructor(private booksServices: BooksService) {
     console.log('constructor');
-  
-    
   }
 
-  isDisabled : boolean=false;
+  isDisabled: boolean = false;
 
   // handleClick(){
   //   this.isDisabled=true;
@@ -36,27 +30,22 @@ export class BooksComponent implements OnInit {
   //   alert("hi")
   // }
 
-
-  myName: String="";
+  myName: String = '';
   // handleInput(event:any){
   //   console.log(event?.target);
   //   this.myName=event?.target.value;
   // }
 
-  isShowing:boolean=true;
-  toggleBooks(){
-    this.isShowing=!this.isShowing;
+  isShowing: boolean = true;
+  toggleBooks() {
+    this.isShowing = !this.isShowing;
   }
 
-  books:Book[]=[
-    
-  ];
+  books: Book[] = [];
 
-  card: Book[]=[];
-  addToCard(book:Book){
-    this.card.push(book);
-    console.log(this.card);
-    
-    
-  }
+  // card: Book[] = [];
+  // addToCard(book: Book) {
+  //   this.card.push(book);
+  //   console.log(this.card);
+  // }
 }

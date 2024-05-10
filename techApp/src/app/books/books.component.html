@@ -6,7 +6,7 @@
 
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let oneBook of books; let i=index ">
-<app-book (bookEmitter)="addToCard($event)"[book] ="oneBook"></app-book>
+<app-book [book] ="oneBook"></app-book>
 </ng-container>
 </ul>
  <!-- <button (click)="handleClick()"  [disabled]="isDisabled">show books</button> -->

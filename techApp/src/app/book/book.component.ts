@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Book } from '../model/book';
 import { Time } from '@angular/common';
+import { CartService } from '../books/cart/cart.service';
 
 @Component({
   selector: 'app-book',
@@ -16,7 +17,11 @@ import { Time } from '@angular/common';
 })
 export class BookComponent implements OnInit, OnDestroy {
   @Input() book: Book = {} as Book;
-  @Output() bookEmitter = new EventEmitter<Book>();
+  // @Output() bookEmitter = new EventEmitter<Book>();
+
+  constructor(private cartService: CartService) {}
+
+  isInCart: boolean=false;
 
   myInterval: any = null;
   ngOnInit(): void {
@@ -30,6 +35,14 @@ export class BookComponent implements OnInit, OnDestroy {
     console.log('destroy');
   }
   addToCard() {
-    this.bookEmitter.emit(this.book);
+    this.isInCart=true;
+    this.cartService.add(this.book);
+
+    // this.bookEmitter.emit(this.book);
+  }
+
+  removeFromCart(){
+    this.isInCart=false;
+    this.cartService.remove(this.book);
   }
 }
