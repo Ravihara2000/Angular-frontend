@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../model/book';
 import { BooksService } from './books.service';
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -16,7 +17,7 @@ export class BooksComponent implements OnInit {
     console.log('oninit');
     this.books = this.booksServices.getBooks();
   }
-  constructor(private booksServices: BooksService) {
+  constructor(private booksServices: BooksService,private router:Router) {
     console.log('constructor');
   }
 
@@ -48,4 +49,9 @@ export class BooksComponent implements OnInit {
   //   this.card.push(book);
   //   console.log(this.card);
   // }
+
+  goToCart(){
+
+  this.router.navigate(['/cart']);
+  }
 }
